@@ -110,7 +110,8 @@ Vagrant.configure(2) do |config|
     sudo rm -rf *	#clean Downloads.dir
     cd ..
     echo "export PATH=\$PATH:/opt/msp430-toolchain/bin" >> .bashrc
-    sudo apt-get install -y lib32z1
-    sudo apt-get install -y lib32stdc++6
+    #We only need this if we are installing the msp430-gcc 32bit binaries on a 64bit machine
+    #sudo apt-get install -y lib32z1
+    #sudo apt-get install -y lib32stdc++6
   SHELL
 end
