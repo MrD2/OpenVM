@@ -103,8 +103,8 @@ Vagrant.configure(2) do |config|
     wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/4_02_00_00/exports/msp430-gcc-support-files-1.194.zip &
     wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/4_02_00_00/exports/msp430-gcc-5.3.0.224_linux64.tar.bz2
     #wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/4_02_00_00/exports/msp430-gcc-5.3.0.224_linux32.tar.bz2
-    unzip msp430-gcc-support-files-1.191.zip &
-    sudo mkdir -p /opt/msp430-toolchain && sudo tar xvjf msp430-gcc-4.1.0.0_linux32.tar.bz2 -C /opt/msp430-toolchain --strip-components=1
+    unzip msp430-gcc-support-files*.zip &
+    sudo mkdir -p /opt/msp430-toolchain && sudo tar xvjf msp430-gcc*.tar.bz2 -C /opt/msp430-toolchain --strip-components=1
     sudo mv msp430-gcc-support-files/include/*.ld /opt/msp430-toolchain/msp430-elf/lib/ldscripts
     sudo mv msp430-gcc-support-files/include/* /opt/msp430-toolchain/msp430-elf/include
     sudo rm -rf *	#clean Downloads.dir
